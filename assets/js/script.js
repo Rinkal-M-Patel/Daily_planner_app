@@ -21,6 +21,32 @@ function generateTimeBlocks() {
 
     const container = $("#time-blocks-container");
 
+    for (let i = 0; i < totalWorkHours.length; i++) {
+        const hour = workHours + i;
+       const hour1 = totalWorkHours[i];
+      console.log(hour + " " +  currentHour );
+      
+      const timeBlockDiv = $("<div>").addClass("row time-block");
+
+      // Set the class for past, present, or future time block
+      if (hour < currentHour) {
+        timeBlockDiv.addClass("past");
+      } else if (hour === currentHour) {
+        timeBlockDiv.addClass("present");
+      } else {
+        timeBlockDiv.addClass("future");
+      }
+
+      // Create the HTML structure for each time block
+      timeBlockDiv.html(`
+        <div class="col-1 hour">${hour1}</div>
+        <textarea class="col-10 description"></textarea>
+        <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+      `);
+
+      container.append(timeBlockDiv);
+      updateCurrentDay();
+    }
 
 }
 
