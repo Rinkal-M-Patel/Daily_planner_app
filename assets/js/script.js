@@ -67,6 +67,16 @@ function updateCurrentDay() {
     });
   }
 
+  // Function to handle the save button click event
+  function handleSaveClick() {
+    const hour = $(this).siblings(".hour").text();
+    const description = $(this).siblings(".description").val();
+    localStorage.setItem(hour, description);
+  }
+
+  
+  // Event listener for save button click
+  $(document).on("click", ".saveBtn", handleSaveClick);
   
   // Initial setup on page load
   $(document).ready(function () {
