@@ -1,19 +1,31 @@
 
-    //target <p> element for currentDay to display
-    var currentDayEl = $('#currentDay');
-    //target containter <div>
-    var containerEl = $('.container');
-    //get current time in hA format
-    var currentHour = days.formatDate(new Date(), 'h');
+function generateTimeBlocks() {
     //create array that lists all of the hours for the current workday
-    var workDayHours = [
-        days.formatDate(new Date().setHours(9), 'hA'),
-        days.formatDate(new Date().setHours(10), 'hA'),
-        days.formatDate(new Date().setHours(11), 'hA'),
-        days.formatDate(new Date().setHours(12), 'hA'),
-        days.formatDate(new Date().setHours(13), 'hA'),
-        days.formatDate(new Date().setHours(14), 'hA'),
-        days.formatDate(new Date().setHours(15), 'hA'),
-        days.formatDate(new Date().setHours(16), 'hA'),
-        days.formatDate(new Date().setHours(17), 'hA')
+    const workHours = 9; // Start time for work hours (9AM)
+    const totalWorkHours = [
+    dayjs().hour(9).format('hA'),
+    dayjs().hour(10).format('hA'),
+    dayjs().hour(11).format('hA'),
+    dayjs().hour(12).format('hA'),
+    dayjs().hour(13).format('hA'),
+    dayjs().hour(14).format('hA'),
+    dayjs().hour(15).format('hA'),
+    dayjs().hour(16).format('hA'),
+    dayjs().hour(17).format('hA')
     ];
+
+    
+    //add current day to <p> tag in the header
+    const currentDate = dayjs();
+    const currentHour = currentDate.hour();
+
+    const container = $("#time-blocks-container");
+
+
+}
+
+function updateCurrentDay() {
+    const currentDate = dayjs();
+    const formattedCurrentDate = currentDate.format("dddd, MMMM D, YYYY hA");
+    $("#currentDay").text(formattedCurrentDate);
+  }
