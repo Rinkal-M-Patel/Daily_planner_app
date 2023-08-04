@@ -55,3 +55,14 @@ function updateCurrentDay() {
     const formattedCurrentDate = currentDate.format("dddd, MMMM D, YYYY hA");
     $("#currentDay").text(formattedCurrentDate);
   }
+
+   // Function to load saved data from local storage
+   function loadSavedData() {
+    $(".time-block").each(function () {
+      const hour = $(this).children(".hour").text();
+      const savedData = localStorage.getItem(hour);
+      if (savedData) {
+        $(this).children(".description").val(savedData);
+      }
+    });
+  }
