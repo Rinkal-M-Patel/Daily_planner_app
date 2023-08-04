@@ -66,3 +66,10 @@ function updateCurrentDay() {
       }
     });
   }
+
+  
+  // Initial setup on page load
+  $(document).ready(function () {
+    generateTimeBlocks();
+    loadSavedData();
+  });
