@@ -24,7 +24,7 @@ function generateTimeBlocks() {
     for (let i = 0; i < totalWorkHours.length; i++) {
         const hour = workHours + i;
        const hour1 = totalWorkHours[i];
-      console.log(hour + " " +  currentHour );
+     
       
       const timeBlockDiv = $("<div>").addClass("row time-block");
 
