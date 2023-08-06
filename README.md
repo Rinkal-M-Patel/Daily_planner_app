@@ -55,7 +55,7 @@ With the Daily Planner App's user-friendly interface, color-coded time blocks, a
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![daily planner app](./assets/demo.png)
 
 
 
