@@ -89,7 +89,7 @@ Continuous Improvement: Embracing continuous improvement and incorporating user 
 
 ## Demo
 
-Insert gif or link to demo
+https://rinkal-m-patel.github.io/Daily_planner_app/
 
 
 ## Run Locally
